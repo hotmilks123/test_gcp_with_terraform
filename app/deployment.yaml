@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kefir-test
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: kefir-test
+  template:
+    metadata:
+      labels:
+        run: kefir-test
+    spec:
+      containers:
+      - image: hotmilks1/kefir_test:latest
+        imagePullPolicy: IfNotPresent
+        name: kefir-test
+        ports:
+        - containerPort: 8080
+          protocol: TCP
