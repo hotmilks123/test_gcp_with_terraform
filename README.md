@@ -3,6 +3,12 @@
 Launch and manage a GKE cluster using Terraform.
 
 ## Launch GKE Cluster
+```
+$ 1) Set vars into Variables.tf
+$ 2) Use terraform commands for deployment your cluster
+$ 3) Open gcp console => k8s engine => Clusters => properties => connect  
+$ 4) Deploy your app with kubectl commands
+``` 
 
 ```
 $ terraform init
